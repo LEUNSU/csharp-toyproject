@@ -60,13 +60,16 @@
             TxtId.Name = "TxtId";
             TxtId.Size = new Size(100, 23);
             TxtId.TabIndex = 2;
+            TxtId.KeyPress += TxtId_KeyPress;
             // 
             // TxtPassword
             // 
             TxtPassword.Location = new Point(111, 172);
             TxtPassword.Name = "TxtPassword";
+            TxtPassword.PasswordChar = '●';
             TxtPassword.Size = new Size(100, 23);
             TxtPassword.TabIndex = 3;
+            TxtPassword.KeyPress += TxtPassword_KeyPress;
             // 
             // BtnLogin
             // 

@@ -1,24 +1,17 @@
+using System.Data.SqlClient;
+using System.Data;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Scheduler
 {
     public partial class FrmScheduler : MetroForm
     {
+
         private string? date; // 날짜 저장 변수
         private string? path; // 파일 경로 저장 변수
-
-        private void FrmScheduler_Load(object sender, EventArgs e)
-        {
-            FrmLogin frm = new FrmLogin();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            frm.TopMost = true;
-            frm.ShowDialog();
-
-            //CreateDirectory();
-            TodayDate();  // 폼 로드시 TodayDate 메서드를 호출해서 오늘의 일정 표시
-        }
         public FrmScheduler()
         {
             InitializeComponent();
@@ -31,7 +24,16 @@ namespace Scheduler
         }
         */
 
+        private void FrmScheduler_Load(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.TopMost = true;
+            frm.ShowDialog();
 
+            //CreateDirectory();
+            TodayDate();  // 폼 로드시 TodayDate 메서드를 호출해서 오늘의 일정 표시
+        }
 
         private void TodayDate() // 오늘 날짜에 보관된 데이터 불러오기
         {
@@ -218,41 +220,5 @@ namespace Scheduler
                     ScheduleList.SelectedRows[0].Cells[1].Value = true;
             }
         }
-
-        private void Schedule_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        /* 수정
-private void ScheduleList_CurrentCellDirtyStateChanged(object sender, EventArgs e)
-{
-if (ScheduleList.IsCurrentCellDirty)
-{
-ScheduleList.CommitEdit(DataGridViewDataErrorContexts.Commit);
-}
-}
-
-private void ScheduleList_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-{
-if (ScheduleList.Columns[e.ColumnIndex].Name == "CheckBoxes")
-{
-DataGridViewDisableButtonCell buttonCell =
- (DataGridViewDisableButtonCell)ScheduleList.
- Rows[e.RowIndex].Cells["Buttons"];
-
-DataGridViewCheckBoxCell checkCell =
- (DataGridViewCheckBoxCell)ScheduleList.
- Rows[e.RowIndex].Cells["CheckBoxes"];
-buttonCell.Enabled = !(bool)checkCell.Value;
-
-ScheduleList.Invalidate();
-}
-}*/
     }
 }
-
-/*TODO
- * 체크리스트 예외처리
- * 개핵똥방구디자인 고치기
-*/
