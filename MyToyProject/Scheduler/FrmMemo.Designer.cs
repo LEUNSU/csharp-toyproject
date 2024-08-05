@@ -29,48 +29,60 @@
         private void InitializeComponent()
         {
             TxtMemo = new TextBox();
-            BtnSave = new Button();
-            BtnCancel = new Button();
+            MemoSave = new Button();
+            MemoCancel = new Button();
+            lstMemoList = new ListBox();
             SuspendLayout();
             // 
             // TxtMemo
             // 
-            TxtMemo.Location = new Point(23, 53);
+            TxtMemo.Location = new Point(23, 256);
             TxtMemo.Multiline = true;
             TxtMemo.Name = "TxtMemo";
-            TxtMemo.Size = new Size(256, 222);
+            TxtMemo.Size = new Size(256, 30);
             TxtMemo.TabIndex = 0;
             // 
-            // BtnSave
+            // MemoSave
             // 
-            BtnSave.Location = new Point(70, 292);
-            BtnSave.Name = "BtnSave";
-            BtnSave.Size = new Size(75, 27);
-            BtnSave.TabIndex = 1;
-            BtnSave.Text = "저장";
-            BtnSave.UseVisualStyleBackColor = true;
-            BtnSave.Click += BtnSave_Click;
+            MemoSave.Location = new Point(70, 292);
+            MemoSave.Name = "MemoSave";
+            MemoSave.Size = new Size(75, 27);
+            MemoSave.TabIndex = 1;
+            MemoSave.Text = "저장";
+            MemoSave.UseVisualStyleBackColor = true;
+            MemoSave.Click += MemoSave_Click;
             // 
-            // BtnCancel
+            // MemoCancel
             // 
-            BtnCancel.Location = new Point(151, 292);
-            BtnCancel.Name = "BtnCancel";
-            BtnCancel.Size = new Size(75, 27);
-            BtnCancel.TabIndex = 2;
-            BtnCancel.Text = "취소";
-            BtnCancel.UseVisualStyleBackColor = true;
-            BtnCancel.Click += BtnCancel_Click;
+            MemoCancel.Location = new Point(151, 292);
+            MemoCancel.Name = "MemoCancel";
+            MemoCancel.Size = new Size(75, 27);
+            MemoCancel.TabIndex = 2;
+            MemoCancel.Text = "취소";
+            MemoCancel.UseVisualStyleBackColor = true;
+            MemoCancel.Click += MemoCancel_Click;
+            // 
+            // lstMemoList
+            // 
+            lstMemoList.FormattingEnabled = true;
+            lstMemoList.ItemHeight = 15;
+            lstMemoList.Location = new Point(25, 63);
+            lstMemoList.Name = "lstMemoList";
+            lstMemoList.Size = new Size(254, 184);
+            lstMemoList.TabIndex = 3;
             // 
             // FrmMemo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(302, 334);
-            Controls.Add(BtnCancel);
-            Controls.Add(BtnSave);
+            Controls.Add(lstMemoList);
+            Controls.Add(MemoCancel);
+            Controls.Add(MemoSave);
             Controls.Add(TxtMemo);
             Name = "FrmMemo";
             Text = "Memo";
+            TransparencyKey = Color.Ivory;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -78,7 +90,8 @@
         #endregion
 
         private TextBox TxtMemo;
-        private Button BtnSave;
-        private Button BtnCancel;
+        private Button MemoSave;
+        private Button MemoCancel;
+        private ListBox lstMemoList;
     }
 }

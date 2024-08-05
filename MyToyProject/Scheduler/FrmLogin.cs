@@ -86,7 +86,7 @@ namespace Scheduler
             using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
             {
                 conn.Open();
-                // @userId, @password 쿼리문 외부에서 변수값을 안전하게 주입함
+                // @userId, @password 쿼리문 외부에서 변수값을 안전하게 주입
                 string query = @"SELECT userId  
                                       , [password]
                                    FROM usertbl

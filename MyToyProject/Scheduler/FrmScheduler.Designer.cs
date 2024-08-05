@@ -36,9 +36,7 @@
             TxtSchedule = new TextBox();
             ScheduleList = new DataGridView();
             Schedule = new GroupBox();
-            Content = new DataGridViewTextBoxColumn();
-            Check = new DataGridViewCheckBoxColumn();
-            memo = new DataGridViewButtonColumn();
+            BtnLogout = new Button();
             ((System.ComponentModel.ISupportInitialize)ScheduleList).BeginInit();
             Schedule.SuspendLayout();
             SuspendLayout();
@@ -50,7 +48,6 @@
             MonthCalendar.Name = "MonthCalendar";
             MonthCalendar.TabIndex = 0;
             MonthCalendar.DateChanged += MonthCalendar_DateChanged;
-            MonthCalendar.DateSelected += MonthCalendar_DateSelected;
             // 
             // DateTimePicker
             // 
@@ -58,19 +55,18 @@
             DateTimePicker.Name = "DateTimePicker";
             DateTimePicker.Size = new Size(220, 23);
             DateTimePicker.TabIndex = 1;
-            DateTimePicker.ValueChanged += DateTimePicker_ValueChanged;
             // 
             // TxtDate
             // 
             TxtDate.BackColor = Color.FromArgb(224, 224, 224);
             TxtDate.Location = new Point(244, 33);
             TxtDate.Name = "TxtDate";
-            TxtDate.Size = new Size(292, 23);
+            TxtDate.Size = new Size(430, 23);
             TxtDate.TabIndex = 2;
             // 
             // BtnSave
             // 
-            BtnSave.Location = new Point(306, 277);
+            BtnSave.Location = new Point(506, 277);
             BtnSave.Name = "BtnSave";
             BtnSave.Size = new Size(81, 28);
             BtnSave.TabIndex = 4;
@@ -80,7 +76,7 @@
             // 
             // BtnDelete
             // 
-            BtnDelete.Location = new Point(393, 277);
+            BtnDelete.Location = new Point(593, 277);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.Size = new Size(81, 28);
             BtnDelete.TabIndex = 5;
@@ -92,7 +88,7 @@
             // 
             TxtSchedule.Location = new Point(244, 248);
             TxtSchedule.Name = "TxtSchedule";
-            TxtSchedule.Size = new Size(292, 23);
+            TxtSchedule.Size = new Size(432, 23);
             TxtSchedule.TabIndex = 6;
             // 
             // ScheduleList
@@ -101,13 +97,11 @@
             ScheduleList.AllowUserToDeleteRows = false;
             ScheduleList.BackgroundColor = SystemColors.ControlLight;
             ScheduleList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            ScheduleList.Columns.AddRange(new DataGridViewColumn[] { Content, Check, memo });
             ScheduleList.Location = new Point(244, 68);
             ScheduleList.Name = "ScheduleList";
             ScheduleList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            ScheduleList.Size = new Size(292, 174);
+            ScheduleList.Size = new Size(430, 174);
             ScheduleList.TabIndex = 7;
-            ScheduleList.CellClick += ScheduleList_CellClick;
             // 
             // Schedule
             // 
@@ -120,41 +114,27 @@
             Schedule.Controls.Add(MonthCalendar);
             Schedule.Location = new Point(12, 56);
             Schedule.Name = "Schedule";
-            Schedule.Size = new Size(550, 321);
+            Schedule.Size = new Size(687, 321);
             Schedule.TabIndex = 0;
             Schedule.TabStop = false;
             // 
-            // Content
+            // BtnLogout
             // 
-            Content.HeaderText = "내용";
-            Content.Name = "Content";
-            Content.ReadOnly = true;
-            Content.Width = 150;
-            // 
-            // Check
-            // 
-            Check.FalseValue = "false";
-            Check.HeaderText = "실행";
-            Check.Name = "Check";
-            Check.ReadOnly = true;
-            Check.Resizable = DataGridViewTriState.False;
-            Check.SortMode = DataGridViewColumnSortMode.Automatic;
-            Check.TrueValue = "true";
-            Check.Width = 60;
-            // 
-            // memo
-            // 
-            memo.HeaderText = "메모";
-            memo.Name = "memo";
-            memo.ReadOnly = true;
-            memo.Resizable = DataGridViewTriState.False;
-            memo.UseColumnTextForButtonValue = true;
+            BtnLogout.BackgroundImage = Properties.Resources.free_icon_user_logout_17123238;
+            BtnLogout.BackgroundImageLayout = ImageLayout.Stretch;
+            BtnLogout.Location = new Point(665, 27);
+            BtnLogout.Name = "BtnLogout";
+            BtnLogout.Size = new Size(34, 32);
+            BtnLogout.TabIndex = 1;
+            BtnLogout.UseVisualStyleBackColor = true;
+            BtnLogout.Click += BtnLogout_Click;
             // 
             // FrmScheduler
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(575, 400);
+            ClientSize = new Size(711, 400);
+            Controls.Add(BtnLogout);
             Controls.Add(Schedule);
             Name = "FrmScheduler";
             Text = "My Schedule";
@@ -175,8 +155,6 @@
         private TextBox TxtSchedule;
         private DataGridView ScheduleList;
         private GroupBox Schedule;
-        private DataGridViewTextBoxColumn Content;
-        private DataGridViewCheckBoxColumn Check;
-        private DataGridViewButtonColumn memo;
+        private Button BtnLogout;
     }
 }
