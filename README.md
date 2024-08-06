@@ -1,10 +1,10 @@
 # csharp-toyproject-2024
 C# WinForm 개인프로젝트 리포지토리
 
-**스케줄관리 앱** 
+**스케줄관리 프로그램** 
 
 -
-    ![실행화면](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs001.png)
+    ![로그인](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs002.png)
 
 - 기능 
     - 날짜를 클릭한 후, 일정을 입력하고 저장 / 잘못 입력했을 때 삭제
@@ -18,4 +18,4 @@ C# WinForm 개인프로젝트 리포지토리
     - 날짜가 범위인 경우에도 일정을 설정할 수 있음
     - DateTimePicker와 MonthCalendar를 연동시켜 둘 중 하나로 날짜를 지정해도 같이 작동
 
-- 배운 점 
+- 배운 점  
