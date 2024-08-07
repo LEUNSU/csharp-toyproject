@@ -1,21 +1,40 @@
 # csharp-toyproject-2024
-C# WinForm 개인프로젝트 리포지토리
 
 **스케줄관리 프로그램** 
 
--
-    ![로그인](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs002.png)
+## 배경
+개인 일정을 캘린더에 저장하여 효율적으로 관리하고 조직할 수 있는 프로그램 설계
 
-- 기능 
-    - 날짜를 클릭한 후, 일정을 입력하고 저장 / 잘못 입력했을 때 삭제
-    - 저장한 일정에 대한 실행 여부를 체크리스트로 표시할 수 있음 
+## 기능
+    - 로그인한 후 날짜를 지정해 일정을 입력하고 저장 및 삭제 
+    - 저장한 일정에 대한 실행 여부를 체크리스트로 표시 가능
+    - 해당 일정에 관련된 메모 작성 가능
 
-    - 보완해야 함!!
-        - 날짜를 지정한 후 일정을 입력 시에 실행여부 체크는 되지만, 다른 날짜를 클릭한 후 지정 날짜에 돌아와서 실행여부를 수정하려고 하면 안 됨. 
-        - 일정 입력 시에 실행여부를 체크하고 저장하면 파일이 폴더에 제대로 저장되지 않고, 다른 날짜를 클릭한 후 지정 날짜에 돌아오면 그리드뷰에 저장한 내용이 나타나지 않음.
+## 특징
+- DateTimePicker와 MonthCalendar를 연동시켜 날짜 지정시 텍스트박스에 표시 및 DB에 저장
+- 날짜가 범위인 경우에도 일정 설정 가능
 
-- 특징
-    - 날짜가 범위인 경우에도 일정을 설정할 수 있음
-    - DateTimePicker와 MonthCalendar를 연동시켜 둘 중 하나로 날짜를 지정해도 같이 작동
+![실행화면](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs004.png)
 
-- 배운 점  
+![실행화면](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs009.png)
+
+- 로그인한 계정의 정보 DB와 연동하여 저장 및 삭제
+
+![DB화면](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs011.png)
+    - 로그인 계정 테이블
+
+![DB화면](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs012.png)
+    - 메모 내용 테이블
+
+![DB화면](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs013.png)
+    - 일정 테이블 
+
+## 프로그램 실행
+- 로그인 화면
+![로그인](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs002.png)
+
+- 날짜 지정한 후 일정 입력, 저장 및 삭제
+![일정저장](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs006.png)
+
+- 저장한 일정 선택 후 메모 작성 및 저장. 일정은 수정 가능
+![메모저장](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs007.png)
