@@ -34,10 +34,13 @@
 
 ## 프로그램 실행
 - 로그인 화면
+
 ![로그인](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs003.png)
 
 - 날짜 지정한 후 일정 입력, 저장 및 삭제
+
 ![일정저장](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs006.png)
 
 - 저장한 일정 선택 후 메모 작성 및 저장. 일정은 수정 가능
+
 ![메모저장](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs007.png)
