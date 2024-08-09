@@ -30,11 +30,6 @@ namespace Scheduler
             InitializeComponent();
         }
 
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0); // 무조건 종료
-        }
-
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             bool isFail = false;
@@ -132,6 +127,21 @@ namespace Scheduler
             {
                 BtnLogin_Click(sender, e);
             }
+        }
+
+        private void BtnSign_Click(object sender, EventArgs e)
+        {
+            Helper.Common.StatSignFrm = new FrmSign(); // FrmSign 폼 객체 생성
+            Helper.Common.StatSignFrm.StartPosition = FormStartPosition.CenterScreen;
+            Helper.Common.StatSignFrm.TopMost = true;
+
+            Helper.Common.StatSignFrm.Show();
+            this.Close();
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

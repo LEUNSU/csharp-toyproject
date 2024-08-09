@@ -73,6 +73,16 @@ namespace Scheduler.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_user_15228538 {
+            get {
+                object obj = ResourceManager.GetObject("free-icon-user-15228538", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap free_icon_user_logout_17123238 {
             get {
                 object obj = ResourceManager.GetObject("free-icon-user-logout-17123238", resourceCulture);

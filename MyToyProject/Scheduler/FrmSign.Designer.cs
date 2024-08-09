@@ -1,6 +1,6 @@
 ﻿namespace Scheduler
 {
-    partial class FrmLogin
+    partial class FrmSign
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
             TxtId = new TextBox();
             TxtPassword = new TextBox();
-            BtnLogin = new Button();
-            BtnCancel = new Button();
+            label1 = new Label();
+            label2 = new Label();
             BtnSign = new Button();
+            BtnCancel = new Button();
             SuspendLayout();
+            // 
+            // TxtId
+            // 
+            TxtId.Location = new Point(111, 120);
+            TxtId.Name = "TxtId";
+            TxtId.Size = new Size(100, 23);
+            TxtId.TabIndex = 0;
+            // 
+            // TxtPassword
+            // 
+            TxtPassword.Location = new Point(111, 172);
+            TxtPassword.Name = "TxtPassword";
+            TxtPassword.PasswordChar = '●';
+            TxtPassword.Size = new Size(100, 23);
+            TxtPassword.TabIndex = 1;
             // 
             // label1
             // 
@@ -43,7 +57,7 @@
             label1.Location = new Point(86, 128);
             label1.Name = "label1";
             label1.Size = new Size(19, 15);
-            label1.TabIndex = 0;
+            label1.TabIndex = 2;
             label1.Text = "ID";
             // 
             // label2
@@ -52,83 +66,53 @@
             label2.Location = new Point(48, 175);
             label2.Name = "label2";
             label2.Size = new Size(57, 15);
-            label2.TabIndex = 1;
+            label2.TabIndex = 3;
             label2.Text = "password";
             // 
-            // TxtId
+            // BtnSign
             // 
-            TxtId.Location = new Point(111, 120);
-            TxtId.Name = "TxtId";
-            TxtId.Size = new Size(100, 23);
-            TxtId.TabIndex = 2;
-            TxtId.KeyPress += TxtId_KeyPress;
-            // 
-            // TxtPassword
-            // 
-            TxtPassword.Location = new Point(111, 172);
-            TxtPassword.Name = "TxtPassword";
-            TxtPassword.PasswordChar = '●';
-            TxtPassword.Size = new Size(100, 23);
-            TxtPassword.TabIndex = 3;
-            TxtPassword.KeyPress += TxtPassword_KeyPress;
-            // 
-            // BtnLogin
-            // 
-            BtnLogin.Location = new Point(57, 252);
-            BtnLogin.Name = "BtnLogin";
-            BtnLogin.Size = new Size(75, 27);
-            BtnLogin.TabIndex = 4;
-            BtnLogin.Text = "로그인";
-            BtnLogin.UseVisualStyleBackColor = true;
-            BtnLogin.Click += BtnLogin_Click;
+            BtnSign.Location = new Point(57, 252);
+            BtnSign.Name = "BtnSign";
+            BtnSign.Size = new Size(75, 27);
+            BtnSign.TabIndex = 5;
+            BtnSign.Text = "등록";
+            BtnSign.UseVisualStyleBackColor = true;
+            BtnSign.Click += BtnSign_Click;
             // 
             // BtnCancel
             // 
             BtnCancel.Location = new Point(150, 252);
             BtnCancel.Name = "BtnCancel";
             BtnCancel.Size = new Size(75, 27);
-            BtnCancel.TabIndex = 5;
+            BtnCancel.TabIndex = 6;
             BtnCancel.Text = "취소";
             BtnCancel.UseVisualStyleBackColor = true;
             BtnCancel.Click += BtnCancel_Click;
             // 
-            // BtnSign
-            // 
-            BtnSign.BackgroundImage = Properties.Resources.free_icon_user_15228538;
-            BtnSign.BackgroundImageLayout = ImageLayout.Stretch;
-            BtnSign.Location = new Point(236, 32);
-            BtnSign.Name = "BtnSign";
-            BtnSign.Size = new Size(34, 32);
-            BtnSign.TabIndex = 6;
-            BtnSign.UseVisualStyleBackColor = true;
-            BtnSign.Click += BtnSign_Click;
-            // 
-            // FrmLogin
+            // FrmSign
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(284, 344);
-            Controls.Add(BtnSign);
             Controls.Add(BtnCancel);
-            Controls.Add(BtnLogin);
-            Controls.Add(TxtPassword);
-            Controls.Add(TxtId);
+            Controls.Add(BtnSign);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "FrmLogin";
-            Text = "Login";
+            Controls.Add(TxtPassword);
+            Controls.Add(TxtId);
+            Name = "FrmSign";
+            Text = "Sign Up";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
         private TextBox TxtId;
         private TextBox TxtPassword;
-        private Button BtnLogin;
-        private Button BtnCancel;
+        private Label label1;
+        private Label label2;
         private Button BtnSign;
+        private Button BtnCancel;
     }
 }
