@@ -1,3 +1,5 @@
+using Scheduler.Helper;
+
 namespace Scheduler
 {
     internal static class Program
@@ -12,6 +14,9 @@ namespace Scheduler
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new FrmScheduler());
+
+            //Common.frmLogin = new FrmLogin();
+            //Application.Run(Common.frmLogin);
         }
     }
 }

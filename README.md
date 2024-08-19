@@ -37,6 +37,10 @@
 
 ![로그인](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs003.png)
 
+- 회원가입 화면
+
+![회원가입](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs018.png)
+
 - 날짜 지정한 후 일정 입력, 저장 및 삭제
 
 ![일정저장](https://raw.githubusercontent.com/LEUNSU/csharp-toyproject-2024/main/images/cs006.png)

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using Scheduler.Helper;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Scheduler
@@ -131,12 +132,16 @@ namespace Scheduler
 
         private void BtnSign_Click(object sender, EventArgs e)
         {
-            Helper.Common.StatSignFrm = new FrmSign(); // FrmSign 폼 객체 생성
-            Helper.Common.StatSignFrm.StartPosition = FormStartPosition.CenterScreen;
-            Helper.Common.StatSignFrm.TopMost = true;
+            //Helper.Common.frmSign = new FrmSign();
+            //Helper.Common.frmSign.ShowDialog();
+            //this.Hide();
+            FrmSign frmSign = new FrmSign();
+            frmSign.StartPosition = FormStartPosition.CenterScreen;
+            frmSign.TopMost = true;
 
-            Helper.Common.StatSignFrm.Show();
-            this.Close();
+            frmSign.ShowDialog();   
+
+            this.Hide();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

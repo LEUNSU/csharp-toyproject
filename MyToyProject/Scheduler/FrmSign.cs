@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Forms;
+using Scheduler.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -69,14 +70,6 @@ namespace Scheduler
                         if (result > 0)
                         {
                             MessageBox.Show("회원가입이 완료되었습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            FrmLogin frmLogin = new FrmLogin(); // FrmLogin 폼 객체 생성
-                            frmLogin.StartPosition = FormStartPosition.CenterScreen;
-                            frmLogin.TopMost = true;
-
-                            frmLogin.ShowDialog(); // FrmLogin 창 열기
-
-                            this.Close(); // FrmSign 창 닫기
                         }
                         else
                         {
@@ -93,13 +86,17 @@ namespace Scheduler
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            FrmLogin frmLogin = new FrmLogin(); // FrmLogin 폼 객체 생성
-            frmLogin.StartPosition = FormStartPosition.CenterScreen;
+            if (Helper.Common.frmLogin != null)
+            {
+                Helper.Common.frmLogin.Show();
+            }
+            else
+            {
+                Helper.Common.frmLogin = new FrmLogin();
+                Helper.Common.frmLogin.Show();
+            }
 
-            frmLogin.TopMost = true;
-            this.Close(); // FrmSign 창 닫기
-
-            frmLogin.ShowDialog(); // FrmLogin 창 열기
+            this.Close();
         }
     }
 }

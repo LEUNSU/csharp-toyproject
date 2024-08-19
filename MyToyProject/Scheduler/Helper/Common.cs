@@ -18,7 +18,9 @@ namespace Scheduler.Helper
         // 로그인아이디
         public static string LoginId { get; set; }
 
-        public static FrmSign StatSignFrm;
-        public static FrmLogin StatLoginFrm;
+        public static FrmLogin frmLogin { get; set; }
+        public static FrmSign frmSign { get; set; }
+
+
     }
 }
